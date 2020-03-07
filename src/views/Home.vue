@@ -1,18 +1,48 @@
 <template>
   <div class="home">
+    <div class="top" @click="userClicked()">
+      <user-avatar></user-avatar>
+    </div>
     <div class="background"></div>
     <div class="buttom">
-      <game-button label="成就" size="small" icon="icon-chengjiu"></game-button>
+      <game-button
+        label="成就"
+        size="small"
+        icon="icon-chengjiu"
+        @click="achClicked()"
+      ></game-button>
       <game-button
         label="背包"
         size="small"
         icon="icon-tubiaozhizuomoban-"
+        @click="bagClicked"
+      ></game-button>
+      <game-button
+        label="小游戏"
+        size="small"
+        icon="icon-gameboy"
+        @click="gameClick()"
       ></game-button>
     </div>
     <div class="right">
-      <game-button label="任务" size="small" icon="icon-renwu1"></game-button>
-      <game-button label="通知" size="small" icon="icon-tongzhi"></game-button>
-      <game-button label="好友" size="small" icon="icon-haoyou"></game-button>
+      <game-button
+        label="任务"
+        size="small"
+        icon="icon-renwu1"
+        @click="eventClicked"
+      ></game-button>
+      <game-button
+        label="通知"
+        size="small"
+        icon="icon-tongzhi"
+        @click="notifyClick()"
+      ></game-button>
+      <game-button
+        label="好友"
+        size="small"
+        icon="icon-haoyou"
+        @click="friendClicked()"
+      ></game-button>
       <game-button
         label="设置"
         size="small"
@@ -20,20 +50,46 @@
         @click="settingClicked"
       ></game-button>
     </div>
+    <transition name="slide-fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import GameButton from "../components/GameButton";
+import UserAvatar from "../components/UserAvatar";
 export default {
   name: "Home",
   components: {
-    GameButton
+    GameButton,
+    UserAvatar
   },
   methods: {
     settingClicked() {
       this.$router.push("/about");
+    },
+    eventClicked() {
+      this.$router.push("/event");
+    },
+    bagClicked() {
+      this.$router.push("/bag");
+    },
+    achClicked() {
+      this.$router.push("/achievement");
+    },
+    friendClicked() {
+      this.$router.push("/friend");
+    },
+    notifyClick() {
+      this.$router.push("/notify");
+    },
+    gameClick() {
+      this.$router.push("/game");
+    },
+    userClicked() {
+      this.$router.push("/user");
     }
   }
 };
@@ -49,6 +105,11 @@ export default {
 }
 .buttom {
   bottom: 0.5rem;
+  margin: 0.5rem;
+  position: fixed;
+}
+.top {
+  top: 0.5rem;
   margin: 0.5rem;
   position: fixed;
 }
