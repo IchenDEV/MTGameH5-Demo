@@ -1,0 +1,9 @@
+{
+	"version":"Sample 1.0.0",
+	"model":"live2d/cat/tororo.moc",
+	"textures":[
+		"live2d/cat/tororo.2048/texture_00.png"
+	],
+	"project_settings":"live2d/cat/tororo.settings.json",
+	"name":"tororo"
+}

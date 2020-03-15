@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <div class="top" @click="userClicked()">
-      <user-avatar></user-avatar>
+      <user-avatar Lv="10"></user-avatar>
     </div>
     <div class="background"></div>
+    <vue-live2d class="center" :modelPath="modelPath"></vue-live2d>
     <div class="buttom">
       <game-button
         label="成就"
@@ -66,6 +67,16 @@ export default {
     GameButton,
     UserAvatar
   },
+  data() {
+    return {
+      modelPath: [
+        {
+          order: 1,
+          path: "/live2d/cat/tororo.model.json"
+        }
+      ]
+    };
+  },
   methods: {
     settingClicked() {
       this.$router.push("/about");
@@ -118,5 +129,11 @@ export default {
   display: grid;
   margin: 0.5rem;
   position: fixed;
+}
+.live2d-wrap {
+  z-index: unset;
+}
+.center {
+  width: 100%;
 }
 </style>

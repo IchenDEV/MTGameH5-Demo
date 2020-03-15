@@ -8,6 +8,8 @@ import "element-ui/lib/theme-chalk/index.css";
 import "office-ui-fabric-core/dist/css/fabric.css";
 import "./assets/font/iconfont.css";
 import "./assets/font/iconfont.js";
+import VueLive2d from "vue-live2d-model";
+Vue.use(VueLive2d);
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 new Vue({
