@@ -1,4 +1,5 @@
 # Node.js with Vue
+
 # Build a Node.js project that uses Vue.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -20,5 +21,16 @@ steps:
     npm run build
   displayName: 'npm install and build'
   
-- download: current
-  patterns: '**/dist/*.zip'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'specific'
+    itemPattern: '**/.zip'
+    downloadPath: '$(System.ArtifactsDirectory)'
