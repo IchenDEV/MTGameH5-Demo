@@ -32,4 +32,4 @@ steps:
     sourceFolder: 'dist'
     contents: '**'
     targetFolder: '/www/wwwroot/game.idevlab.cn'
-    readyTimeout: '20000'
+    readyTimeout: '2000000'
