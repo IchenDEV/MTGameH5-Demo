@@ -72,6 +72,9 @@ export default {
     font-family: "bwrite";
     white-space: nowrap;
     -webkit-text-stroke: 1.2px #409eff;
+    overflow-x: visible;
+    overflow-y: visible;
+    overflow: auto;
   }
   .icon {
     font-size: 1.5rem;
@@ -86,6 +89,9 @@ export default {
     font-size: 1.1rem;
     white-space: nowrap;
     font-family: "bwrite";
+    overflow-x: visible;
+    overflow-y: visible;
+    overflow: auto;
   }
   .icon {
     font-size: 1.5rem;

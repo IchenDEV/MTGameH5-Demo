@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="top" @click="userClicked()">
+    <div class="top">
       <user-avatar Lv="10"></user-avatar>
     </div>
     <div class="background"></div>
@@ -19,7 +19,7 @@
         @click="bagClicked"
       ></game-button>
       <game-button
-        label="小游戏"
+        label="游戏"
         size="small"
         icon="icon-gameboy"
         @click="gameClick()"

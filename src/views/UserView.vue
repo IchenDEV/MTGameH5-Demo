@@ -1,6 +1,5 @@
 <template>
-  <bottom-panel>
-  </bottom-panel>
+  <bottom-panel></bottom-panel>
 </template>
 
 <script>

@@ -26,6 +26,7 @@ export default {
   padding-top: 0.5rem;
   box-sizing: border-box;
   z-index: 200;
+  overflow: visible;
 }
 .pxb {
   position: fixed;
