@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="top">
-      <user-avatar Lv="10"></user-avatar>
+      <user-avatar :Lv="10"></user-avatar>
     </div>
     <div class="background"></div>
     <vue-live2d class="center" :modelPath="modelPath"></vue-live2d>

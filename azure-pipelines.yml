@@ -26,10 +26,4 @@ steps:
     ArtifactName: 'Test'
     publishLocation: 'Container'
   displayName: 'Publish'
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'TestServer'
-    sourceFolder: 'dist'
-    contents: '**'
-    targetFolder: '/www/wwwroot/game.idevlab.cn'
-    readyTimeout: '2000000'
+

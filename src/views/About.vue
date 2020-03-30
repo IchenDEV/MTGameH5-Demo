@@ -21,8 +21,8 @@
     <div class="back">
       <h4 class="header red">删除</h4>
     </div>
-    <div class="back">
-      <h4 class="header" @click="$router.go(-1)">返回</h4>
+    <div class="back" @click="$router.push('/')">
+      <h4 class="header">返回</h4>
     </div>
   </div>
 </template>
