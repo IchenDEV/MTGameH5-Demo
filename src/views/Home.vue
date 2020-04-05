@@ -19,9 +19,15 @@
         @click="bagClicked"
       ></game-button>
       <game-button
-        label="游戏"
+        label="商城"
         size="small"
         icon="icon-gameboy"
+        @click="storeClicked()"
+      ></game-button>
+      <game-button
+        label="游戏"
+        size="small"
+        icon="icon-gamepadxbox"
         @click="gameClick()"
       ></game-button>
     </div>
@@ -86,6 +92,9 @@ export default {
     },
     bagClicked() {
       this.$router.push("/bag");
+    },
+    storeClicked() {
+      this.$router.push("/store");
     },
     achClicked() {
       this.$router.push("/achievement");
