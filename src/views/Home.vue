@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <x-d-map-panel></x-d-map-panel>
     <div class="top">
       <user-avatar :Lv="10"></user-avatar>
     </div>
@@ -56,6 +57,12 @@
         icon="icon-shezhi"
         @click="settingClicked"
       ></game-button>
+        <game-button
+        label="AR"
+        size="small"
+        icon="icon-renwu1"
+        @click="arClicked"
+      ></game-button>
     </div>
     <transition name="slide-fade">
       <router-view />
@@ -67,11 +74,13 @@
 // @ is an alias to /src
 import GameButton from "../components/GameButton";
 import UserAvatar from "../components/UserAvatar";
+import XDMapPanel from "../components/XDMapPanel";
 export default {
   name: "Home",
   components: {
     GameButton,
-    UserAvatar
+    UserAvatar,
+    XDMapPanel
   },
   data() {
     return {
@@ -89,6 +98,9 @@ export default {
     },
     eventClicked() {
       this.$router.push("/event");
+    },
+    arClicked() {
+      this.$router.push("/ar");
     },
     bagClicked() {
       this.$router.push("/bag");
@@ -121,7 +133,8 @@ export default {
   height: 100%;
   position: absolute;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
+  opacity: 0.4;
 }
 .buttom {
   bottom: 0.5rem;

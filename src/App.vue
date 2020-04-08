@@ -77,4 +77,11 @@ body {
   transform: translateY(10rem);
   opacity: 0;
 }
+.flex-containerX {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  border: 0;
+  flex-wrap: wrap;
+}
 </style>

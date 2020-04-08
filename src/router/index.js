@@ -53,6 +53,12 @@ const routes = [
     ]
   },
   {
+    path: "/ar",
+    name: "AR",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/XRView.vue")
+  },
+  {
     path: "/about",
     name: "About",
     component: () =>
