@@ -5,7 +5,11 @@
     <div class="top">
       <user-avatar :Lv="$store.state.level"></user-avatar>
     </div>
-    <vue-live2d class="center" v-if="$store.state.isReload"  :modelPath="$store.state.modelPath"></vue-live2d>
+    <vue-live2d
+      class="center"
+      v-if="$store.state.isReload"
+      :modelPath="$store.state.modelPath"
+    ></vue-live2d>
     <div class="buttom">
       <game-button
         label="成就"
