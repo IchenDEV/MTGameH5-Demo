@@ -5,46 +5,22 @@
     <div class="top">
       <user-avatar :Lv="$store.state.level"></user-avatar>
     </div>
-    <vue-live2d class="center" v-if="$store.state.isReload"  :modelPath="$store.state.modelPath"></vue-live2d>
+    <vue-live2d class="center" :modelPath="$store.state.modelPath"></vue-live2d>
     <div class="buttom">
       <game-button
-        label="成就"
+        label="点赞"
         size="small"
         icon="icon-chengjiu"
         @click="achClicked()"
       ></game-button>
       <game-button
-        label="背包"
+        label="投食"
         size="small"
         icon="icon-tubiaozhizuomoban-"
         @click="bagClicked"
       ></game-button>
-      <game-button
-        label="商城"
-        size="small"
-        icon="icon-gameboy"
-        @click="storeClicked()"
-      ></game-button>
-      <game-button
-        label="游戏"
-        size="small"
-        icon="icon-gamepadxbox"
-        @click="gameClick()"
-      ></game-button>
     </div>
     <div class="right">
-      <game-button
-        label="任务"
-        size="small"
-        icon="icon-renwu1"
-        @click="eventClicked"
-      ></game-button>
-      <game-button
-        label="通知"
-        size="small"
-        icon="icon-tongzhi"
-        @click="notifyClick()"
-      ></game-button>
       <game-button
         label="好友"
         size="small"
@@ -56,12 +32,6 @@
         size="small"
         icon="icon-shezhi"
         @click="settingClicked"
-      ></game-button>
-      <game-button
-        label="AR"
-        size="small"
-        icon="icon-renwu1"
-        @click="arClicked"
       ></game-button>
     </div>
     <transition name="slide-fade">

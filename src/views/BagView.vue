@@ -3,20 +3,37 @@
     <h2>背包</h2>
     <el-tabs class="tabs" tab-position="left">
       <el-tab-pane label="食物" class="stab flex-containerX">
-        <bag-item :key="item" v-for="item in foods" :label="item"></bag-item>
+        <bag-item
+          :key="item.name"
+          v-for="item in foods"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="皮肤" class="stab flex-containerX">
-        <bag-item label="折耳"></bag-item>
-        <bag-item label="布偶"></bag-item>
-        <bag-item label="英短"></bag-item>
-        <bag-item label="美短"></bag-item>
-        <bag-item label="折耳"></bag-item>
+        <bag-item
+          :key="item.name"
+          v-for="item in skins"
+          :label="item.name"
+          :icon="item.icon"
+          @action="useSkin"
+        ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="优惠券" class="stab flex-containerX">
-        <bag-item label="折耳"></bag-item>
-        <bag-item label="9折优惠"></bag-item>
-        <bag-item label="8.8折优惠券"></bag-item>
-        <bag-item label="折耳"></bag-item>
+        <bag-item
+          :key="item.name"
+          v-for="item in coupons"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
+      </el-tab-pane>
+      <el-tab-pane label="福卡" class="stab flex-containerX">
+        <bag-item
+          :key="item.name"
+          v-for="item in fucards"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
       </el-tab-pane>
     </el-tabs>
   </bottom-panel>
@@ -29,28 +46,38 @@ import BagItem from "../components/BagItem";
 export default {
   name: "BagView",
   components: { BottomPanel, BagItem },
-  data(){
+  data() {
     return {
       foods: [
-        "小鱼干",
-        "冻干",
-        "罐头",
-        "帝王蟹",
-        "白开水",
-        "卡布奇诺",
-        "猫屎咖啡"
+        { name: "小鱼干", icon: "" },
+        { name: "冻干", icon: "" },
+        { name: "罐头", icon: "" },
+        { name: "帝王蟹", icon: "" },
+        { name: "白开水", icon: "" },
+        { name: "卡布奇诺", icon: "" },
+        { name: "猫屎咖啡", icon: "" }
+      ],
+      skins: [
+        { name: "hijiki", icon: "" },
+        { name: "tororo", icon: "" },
+        { name: "美短", icon: "" },
+        { name: "折耳", icon: "" }
+      ],
+      fucards: [{ name: "西湖福", icon: "" }],
+      coupons: [
+        { name: "9.8折", icon: "" },
+        { name: "8.8折", icon: "" },
+        { name: "6.8折", icon: "" },
+        { name: "5.8折", icon: "" }
       ]
     };
+  },
+  methods: {
+    useSkin(name) {
+      let path = { path: "/live2d/" + name + "/" + name + ".model.json" };
+      this.$store.state.modelPath.path = path;
+      this.$route.push("/");
+    }
   }
 };
 </script>
-<style lang="less" scoped>
-.tabs {
-  border-radius: 2rem;
-  overflow: hidden;
-}
-.stab {
-  padding-bottom: 10rem;
-  overflow: scroll;
-}
-</style>

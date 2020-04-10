@@ -84,4 +84,12 @@ body {
   border: 0;
   flex-wrap: wrap;
 }
+.tabs {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.stab {
+  padding-bottom: 10rem;
+  overflow: scroll;
+}
 </style>

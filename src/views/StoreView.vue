@@ -6,101 +6,43 @@
       href="https://at.alicdn.com/t/font_1734945_hjbc2vctox.css"
     />
     <el-tabs class="tabs" tab-position="left">
-      <el-tab-pane label="食物" class="stab">
-        <h4 @click="isShow = isShow == 11 ? -1 : 11">小鱼干</h4>
-        <el-button v-if="isShow == 11">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 12 ? -1 : 12">冻干</h4>
-        <el-button v-if="isShow == 12">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 13 ? -1 : 13">罐头</h4>
-        <el-button v-if="isShow == 13">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 14 ? -1 : 14">帝王蟹</h4>
-        <el-button v-if="isShow == 14">购买</el-button>
+      <el-tab-pane label="食物" class="stab flex-containerX">
+        <bag-item
+          :key="item"
+          mode="buy"
+          v-for="item in foods"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
       </el-tab-pane>
-      <el-tab-pane label="饮料" class="stab">
-        <h4 @click="isShow = isShow == 8 ? -1 : 8">白开水</h4>
-        <el-button v-if="isShow == 8">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 9 ? -1 : 9">卡布奇诺</h4>
-        <el-button v-if="isShow == 9">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 10 ? -1 : 10">猫屎咖啡</h4>
-        <el-button v-if="isShow == 10">购买</el-button>
+      <el-tab-pane label="饮料" class="stab flex-containerX">
+        <bag-item
+          :key="item"
+          mode="buy"
+          v-for="item in drinks"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
       </el-tab-pane>
-      <el-tab-pane label="皮肤" class="stab">
-        <h4 @click="isShow = isShow == 4 ? -1 : 4">折耳</h4>
-        <el-button v-if="isShow == 4">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 5 ? -1 : 5">布偶</h4>
-        <el-button v-if="isShow == 5">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 6 ? -1 : 6">英短</h4>
-        <el-button v-if="isShow == 6">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 7 ? -1 : 7">美短</h4>
-        <el-button v-if="isShow == 7">购买</el-button>
+      <el-tab-pane label="皮肤" class="stab flex-containerX">
+        <bag-item
+          :key="item"
+          mode="buy"
+          v-for="item in skins"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
       </el-tab-pane>
-      <el-tab-pane label="优惠券" class="stab">
-        <h4 @click="isShow = isShow == 0 ? -1 : 0">9折优惠券</h4>
-        <el-button v-if="isShow == 0">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 1 ? -1 : 1">8.8折优惠券</h4>
-        <el-button v-if="isShow == 1">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 2 ? -1 : 2">8.5折优惠券</h4>
-        <el-button v-if="isShow == 2">购买</el-button>
-        <hr
-          style="FILTER: alpha(opacity=100,finishopacity=0,style=1)"
-          width="80%"
-          SIZE="3"
-        />
-        <h4 @click="isShow = isShow == 3 ? -1 : 3">8折优惠券</h4>
-        <el-button v-if="isShow == 3">购买</el-button>
+      <el-tab-pane label="优惠券" class="stab flex-containerX">
+        <bag-item
+          :key="item"
+          v-for="item in coupons"
+          :label="item.name"
+          :icon="item.icon"
+        ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="积分捐赠" class="stab">
-        <div class="+-" style="text-align:center;line-height:120px;" id="app">
+        <div class="+-" style="text-align:center;line-height:120px;">
           <span
             class="iconfont icon-arrow_back"
             style="font-size:50px;"
@@ -122,11 +64,36 @@
 <script>
 // @ is an alias to /src
 import BottomPanel from "../components/BottomPanel";
+import BagItem from "../components/BagItem";
 export default {
   name: "StoreView",
-  components: { BottomPanel },
+  components: { BottomPanel, BagItem },
   data() {
     return {
+      foods: [
+        { name: "小鱼干", icon: "" },
+        { name: "冻干", icon: "" },
+        { name: "罐头", icon: "" },
+        { name: "帝王蟹", icon: "" }
+      ],
+      drinks: [
+        { name: "白开水", icon: "" },
+        { name: "卡布奇诺", icon: "" },
+        { name: "猫屎咖啡", icon: "" }
+      ],
+      skins: [
+        { name: "折耳", icon: "" },
+        { name: "布偶", icon: "" },
+        { name: "美短", icon: "" },
+        { name: "折耳", icon: "" }
+      ],
+      coupons: [
+        { name: "9.8折", icon: "" },
+        { name: "8.8折", icon: "" },
+        { name: "6.8折", icon: "" },
+        { name: "5.8折", icon: "" }
+      ],
+      fucards: [{ name: "西湖福", icon: "" }],
       num: 0,
       isShow: -1
     };

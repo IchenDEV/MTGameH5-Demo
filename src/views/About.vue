@@ -6,6 +6,10 @@
       <el-switch v-model="$store.state.playBackmusic"></el-switch>
     </div>
     <div class="flex-container">
+      <h4 class="header">3D 地图</h4>
+      <el-switch v-model="$store.state.XDMap"></el-switch>
+    </div>
+    <div class="flex-container">
       <h4 class="header">音效</h4>
       <el-switch v-model="sound"></el-switch>
     </div>

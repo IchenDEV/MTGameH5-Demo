@@ -27,6 +27,7 @@ export default {
   box-sizing: border-box;
   z-index: 200;
   overflow: visible;
+  max-height: 80%;
 }
 .pxb {
   position: fixed;

@@ -1,0 +1,431 @@
+/* DaTouWang URL: www.datouwang.com */
+body{margin:0;padding:0;overflow:hidden;}
+:root {
+  --green: #32CD32;
+  --blue: #4D4DFF;
+}
+
+/* Background */
+
+.background {
+  background: #fff url(../img/datouwang.com.png) repeat right bottom;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 200vw;
+  height: 350px;
+  z-index: -1;
+  -moz-animation: background 30s infinite linear;
+  -webkit-animation: background 30s infinite linear;
+}
+@keyframes background {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100vw;
+  }
+}
+.road {
+  background-color: #666684;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  height: 240px;
+  width: 100vw;
+  z-index: -1;
+}
+/* Bikes */
+
+.bikes {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 110px auto 0px;
+  padding-bottom: 50px;
+}
+
+/* Small bike */
+
+.bike-small {
+  position: relative;
+  width: 400px;
+  display: block;
+  padding-top: 100px;
+}
+.bike-small .frame .front,
+.bike-small .frame .main .top,
+.bike-small .frame .main .bottom,
+.bike-small .frame .back {
+  background-color: var(--green)
+}
+.bike-small .frame {
+  display: flex;
+  justify-content: center;
+  width: 56%;
+  margin: auto;
+  height: 100px;
+  z-index: 1;
+  position: relative;
+}
+.bike-small .frame .front {
+  width: 8px;
+  height: 100%;
+  transform: rotate(25deg);
+  margin: -2px 0px 0px -40px;
+  position: relative;
+}
+.bike-small .frame .front:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  border-radius: 100%;
+  margin: 0px 0px -7px -2.5px;
+}
+.bike-small .frame .front .handles {
+  background-color: #222;
+  width: 30px;
+  height: 6px;
+  transform: rotate(-25deg);
+  position: absolute;
+  top: 0;
+  margin: -7px 0px 0px -3px;
+  border-radius: 5px;
+}
+.bike-small .frame .main {
+  width: 50%;
+}
+.bike-small .frame .main .top {
+  height: 6px;
+  width: 100%;
+  margin: 13px 0px 0px 12px;
+}
+.bike-small .frame .main .bottom {
+  height: 6px;
+  width: 92%;
+  transform: rotate(40deg);
+  margin: 33px 0px 0px -5px;
+}
+.bike-small .frame .main .pedals {
+  width: 55px;
+  height: 4px;
+  background-color: #222;
+  margin: 28px 0px 0px auto;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-animation: pedalsSpin 1.5s infinite linear;
+  -webkit-animation: pedalsSpin 1.5s infinite linear;
+}
+@keyframes pedalsSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+.bike-small .frame .main .pedals .pedal {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 100%;
+}
+.bike-small .frame .back {
+  width: 6px;
+  height: 100%;
+  transform: rotate(25deg);
+  margin: 0px 0px 0px -8px;
+  position: relative;
+}
+.bike-small .frame .back .top {
+  width: 4px;
+  height: 85%;
+  margin: -7px 0px 0px 38px;
+  background-color: #222;
+  transform: rotate(-55deg);
+  position: relative;
+  z-index: 5;
+}
+.bike-small .frame .back .top:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  border-radius: 100%;
+  margin: 0px 0px -12px -5px;
+}
+.bike-small .frame .back .bottom {
+  width: 4px;
+  height: 100%;
+  background-color: #222;
+  position: absolute;
+  transform: rotate(68deg);
+  top: 0;
+  margin: 30px 0px 0px 37px;
+}
+.bike-small .frame .back .seat {
+  background-color: #222;
+  width: 35px;
+  height: 12px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  transform: rotate(-25deg);
+  margin: -5px 0px 0px -20px;
+}
+.bike-small .tires {
+  width: 78%;
+  display: flex;
+  justify-content: space-between;
+  margin: -70px auto 0px;
+  z-index: -1;
+  position: relative;
+}
+.bike-small .tire {
+  border: 10px solid #222;
+  height: 102px;
+  width: 102px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-animation: tireSpin 1s infinite linear;
+  -webkit-animation: tireSpin 1s infinite linear;
+  position: relative;
+  z-index: -1;
+}
+@keyframes tireSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+.bike-small .tire .tire-inner {
+  height: 105px;
+  width: 105px;
+  border-radius: 100%;
+  position: relative;
+  z-index: -1;
+}
+.bike-small .tire .tire-inner .spoke {
+  background-color: #222;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+}
+.bike-small .tire .tire-inner .spoke:nth-child(2) {
+  transform: rotate(90deg);
+}
+.bike-small .tire .tire-inner .spoke:nth-child(3) {
+  transform: rotate(135deg);
+}
+.bike-small .tire .tire-inner .spoke:nth-child(4) {
+  transform: rotate(45deg);
+}
+
+/* Large Bike */
+
+.bike-large {
+  position: relative;
+  width: 600px;
+  display: block;
+  padding-top: 50px
+}
+.bike-large .frame .front,
+.bike-large .frame .main .top,
+.bike-large .frame .main .bottom,
+.bike-large .frame .back {
+  background-color: var(--blue)
+}
+.bike-large .frame {
+  display: flex;
+  justify-content: center;
+  width: 71%;
+  margin: auto;
+  height: 150px;
+  z-index: 1;
+  position: relative;
+  margin-top: -17px;
+}
+.bike-large .frame .front {
+  width: 10px;
+  height: 100%;
+  transform: rotate(25deg);
+  margin: 0px 0px 0px -40px;
+  position: relative;
+}
+.bike-large .frame .front:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  border-radius: 100%;
+  margin: 0px 0px -7px -3px;
+}
+.bike-large .frame .front .handles {
+  background-color: #222;
+  width: 50px;
+  height: 8px;
+  transform: rotate(-25deg);
+  position: absolute;
+  top: 0;
+  margin: -12px 0px 0px -5px;
+  border-radius: 5px;
+}
+.bike-large .frame .main {
+  width: 50%;
+}
+.bike-large .frame .main .top {
+  height: 8px;
+  width: 100%;
+  margin: 15px 0px 0px 18px;
+}
+.bike-large .frame .main .bottom {
+  height: 8px;
+  width: 88%;
+  transform: rotate(35deg);
+  margin: 62px 0px 0px -6px;
+}
+.bike-large .frame .main .pedals {
+  width: 70px;
+  height: 6px;
+  background-color: #222;
+  margin: 40px 15px 0px auto;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-animation: pedalsSpin 2s infinite linear;
+  -webkit-animation: pedalsSpin 2s infinite linear;
+}
+@keyframes pedalsSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+.bike-large .frame .main .pedals .pedal {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 100%;
+}
+.bike-large .frame .back {
+  width: 8px;
+  height: 100%;
+  transform: rotate(25deg);
+  margin: 0px 0px 0px -12px;
+  position: relative;
+}
+.bike-large .frame .back .top {
+  width: 6px;
+  height: 85%;
+  margin: -5px 0px 0px 48px;
+  background-color: #222;
+  transform: rotate(-45deg);
+  position: relative;
+  z-index: 5;
+}
+.bike-large .frame .back .top:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  border-radius: 100%;
+  margin: 0px 0px -12px -5px;
+}
+.bike-large .frame .back .bottom {
+  width: 6px;
+  height: 90%;
+  background-color: #222;
+  position: absolute;
+  transform: rotate(67deg);
+  top: 0;
+  margin: 67px 0px 0px 37px;
+}
+.bike-large .frame .back .seat {
+  background-color: #222;
+  width: 45px;
+  height: 16px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  transform: rotate(-25deg);
+  margin: -8px 0px 0px -28px;
+}
+.bike-large .tires {
+  width: 78%;
+  display: flex;
+  justify-content: space-between;
+  margin: -85px auto 0px;
+  z-index: -1;
+  position: relative;
+}
+.bike-large .tire {
+  border: 12px solid #222;
+  height: 130px;
+  width: 130px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-animation: tireSpin 1.5s infinite linear;
+  -webkit-animation: tireSpin 1.5s infinite linear;
+  position: relative;
+  z-index: -1;
+}
+@keyframes tireSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+.bike-large .tire .tire-inner {
+  height: 135px;
+  width: 135px;
+  border-radius: 100%;
+  position: relative;
+  z-index: -1;
+}
+.bike-large .tire .tire-inner .spoke {
+  background-color: #222;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+}
+.bike-large .tire .tire-inner .spoke:nth-child(2) {
+  transform: rotate(90deg);
+}
+.bike-large .tire .tire-inner .spoke:nth-child(3) {
+  transform: rotate(135deg);
+}
+.bike-large .tire .tire-inner .spoke:nth-child(4) {
+  transform: rotate(45deg);
+}
+.bike-large .dirt {
+  
+}
+.bike-large .dirt .spec {
+  
+}
