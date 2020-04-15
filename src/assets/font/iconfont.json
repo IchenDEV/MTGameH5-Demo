@@ -1,10 +1,24 @@
 {
-  "id": "1734945",
-  "name": "123",
+  "id": "1674297",
+  "name": "1",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "12194372",
+      "name": "gameboy",
+      "font_class": "gameboy",
+      "unicode": "ec33",
+      "unicode_decimal": 60467
+    },
+    {
+      "icon_id": "12194373",
+      "name": "gamepad xbox",
+      "font_class": "gamepadxbox",
+      "unicode": "ec34",
+      "unicode_decimal": 60468
+    },
     {
       "icon_id": "1361829",
       "name": "通知",
@@ -65,8 +79,8 @@
       "icon_id": "7723960",
       "name": "任务",
       "font_class": "renwu3",
-      "unicode": "e602",
-      "unicode_decimal": 58882
+      "unicode": "e601",
+      "unicode_decimal": 58881
     },
     {
       "icon_id": "8026125",
@@ -79,8 +93,8 @@
       "icon_id": "8360633",
       "name": "好友",
       "font_class": "haoyou",
-      "unicode": "e603",
-      "unicode_decimal": 58883
+      "unicode": "e602",
+      "unicode_decimal": 58882
     },
     {
       "icon_id": "8860988",
@@ -104,88 +118,11 @@
       "unicode_decimal": 59318
     },
     {
-      "icon_id": "12194372",
-      "name": "gameboy",
-      "font_class": "gameboy",
-      "unicode": "ec33",
-      "unicode_decimal": 60467
-    },
-    {
-      "icon_id": "12194373",
-      "name": "gamepad xbox",
-      "font_class": "gamepadxbox",
-      "unicode": "ec34",
-      "unicode_decimal": 60468
-    },
-    {
       "icon_id": "13203113",
       "name": "设置",
       "font_class": "shezhi",
-      "unicode": "e606",
-      "unicode_decimal": 58886
-    },
-    {
-      "icon_id": "925476",
-      "name": "咖啡",
-      "font_class": "kafei",
-      "unicode": "e646",
-      "unicode_decimal": 58950
-    },
-    {
-      "icon_id": "2822889",
-      "name": "水瓶",
-      "font_class": "shuiping",
-      "unicode": "e65a",
-      "unicode_decimal": 58970
-    },
-    {
-      "icon_id": "5092020",
-      "name": "帝王蟹&进口海鲜",
-      "font_class": "diwangxiejinkouhaixian",
-      "unicode": "e70f",
-      "unicode_decimal": 59151
-    },
-    {
-      "icon_id": "5199916",
-      "name": "卡布奇诺",
-      "font_class": "qiabuqinuo",
-      "unicode": "e610",
-      "unicode_decimal": 58896
-    },
-    {
-      "icon_id": "5205043",
-      "name": "罐头",
-      "font_class": "guantou",
-      "unicode": "e612",
-      "unicode_decimal": 58898
-    },
-    {
-      "icon_id": "7541888",
-      "name": "冻干蔬果",
-      "font_class": "dongganshuguo",
-      "unicode": "e601",
-      "unicode_decimal": 58881
-    },
-    {
-      "icon_id": "7827577",
-      "name": "小鱼干",
-      "font_class": "xiaoyugan",
       "unicode": "e605",
       "unicode_decimal": 58885
-    },
-    {
-      "icon_id": "13874731",
-      "name": "arrow_right",
-      "font_class": "arrow_right",
-      "unicode": "e643",
-      "unicode_decimal": 58947
-    },
-    {
-      "icon_id": "13874732",
-      "name": "arrow_back",
-      "font_class": "arrow_back",
-      "unicode": "e644",
-      "unicode_decimal": 58948
     }
   ]
 }
