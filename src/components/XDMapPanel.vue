@@ -19,12 +19,26 @@ export default {
         resizeEnable: true,
         rotateEnable: true,
         pitchEnable: true,
-        zoom: 50,
+        zoom: 17,
         pitch: 80,
         rotation: -15,
         viewMode: "3D", //开启3D视图,默认为关闭
         buildingAnimation: true, //楼块出现是否带动画
-        expandZoomRange: true
+        expandZoomRange: true,
+        zooms: [3, 20],
+        center: [116.333926, 39.997245],
+        showLabel: true,
+        disableSocket: true,
+        layers: [
+          new AMap.TileLayer.RoadNet({
+            //rejectMapMask:true
+          }),
+          new AMap.Buildings({
+            zooms: [16, 18],
+            zIndex: 10,
+            heightFactor: 2 //2倍于默认高度，3D下有效
+          })
+        ]
       });
       AMap.plugin("AMap.Geolocation", () => {
         var geolocation = new AMap.Geolocation({
@@ -32,16 +46,18 @@ export default {
           timeout: 10000, //超过10秒后停止定位，默认：5s
           buttonPosition: "RB", //定位按钮的停靠位置
           buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
-          zoomToAccuracy: true //定位成功后是否自动调整地图视野到定位点
+          zoomToAccuracy: false //定位成功后是否自动调整地图视野到定位点
         });
         this.map.addControl(geolocation);
-        geolocation.getCurrentPosition((status, result) => {
-          if (status == "complete") {
-            onComplete(result);
-          } else {
-            onError(result);
-          }
-        });
+        window.setInterval(() => {
+          geolocation.getCurrentPosition((status, result) => {
+            if (status == "complete") {
+              onComplete(result);
+            } else {
+              onError(result);
+            }
+          });
+        }, 5000);
       });
       //解析定位结果
       function onComplete(data) {

@@ -4,16 +4,16 @@
     <el-tabs class="tabs" tab-position="left">
       <el-tab-pane label="食物" class="stab flex-containerX">
         <bag-item
-          :key="item.name"
-          v-for="item in foods"
+          :key="index"
+          v-for="(item, index) in foods"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="皮肤" class="stab flex-containerX">
         <bag-item
-          :key="item.name"
-          v-for="item in skins"
+          :key="index"
+          v-for="(item, index) in skins"
           :label="item.name"
           :icon="item.icon"
           @action="useSkin"
@@ -21,16 +21,16 @@
       </el-tab-pane>
       <el-tab-pane label="优惠券" class="stab flex-containerX">
         <bag-item
-          :key="item.name"
-          v-for="item in coupons"
+          :key="index"
+          v-for="(item, index) in coupons"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="福卡" class="stab flex-containerX">
         <bag-item
-          :key="item.name"
-          v-for="item in fucards"
+          :key="index"
+          v-for="(item, index) in fucards"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>
@@ -76,7 +76,7 @@ export default {
     useSkin(name) {
       let path = { path: "/live2d/" + name + "/" + name + ".model.json" };
       this.$store.state.modelPath.path = path;
-      this.$route.push("/");
+      this.$router.push("/");
     }
   }
 };

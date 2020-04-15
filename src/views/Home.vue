@@ -3,7 +3,7 @@
     <x-d-map-panel v-if="$store.state.XDMap"></x-d-map-panel>
     <div v-else class="background"></div>
     <div class="top">
-      <user-avatar :Lv="$store.state.level"></user-avatar>
+      <StationPanel></StationPanel>
     </div>
     <vue-live2d
       class="center"
@@ -11,6 +11,7 @@
       :modelPath="$store.state.modelPath"
     ></vue-live2d>
     <div class="buttom">
+      <user-avatar style="top:1.4rem;" :Lv="$store.state.level"></user-avatar>
       <game-button
         label="成就"
         size="small"
@@ -78,12 +79,14 @@
 import GameButton from "../components/GameButton";
 import UserAvatar from "../components/UserAvatar";
 import XDMapPanel from "../components/XDMapPanel";
+import StationPanel from "../components/StationPanel";
 export default {
   name: "Home",
   components: {
     GameButton,
     UserAvatar,
-    XDMapPanel
+    XDMapPanel,
+    StationPanel
   },
   methods: {
     settingClicked() {

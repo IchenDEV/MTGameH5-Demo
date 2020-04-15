@@ -8,35 +8,35 @@
     <el-tabs class="tabs" tab-position="left">
       <el-tab-pane label="食物" class="stab flex-containerX">
         <bag-item
-          :key="item"
+          :key="index + 'S'"
           mode="buy"
-          v-for="item in foods"
+          v-for="(item, index) in foods"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="饮料" class="stab flex-containerX">
         <bag-item
-          :key="item"
+          :key="index + 'S'"
           mode="buy"
-          v-for="item in drinks"
+          v-for="(item, index) in drinks"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="皮肤" class="stab flex-containerX">
         <bag-item
-          :key="item"
+          :key="index + 'S'"
           mode="buy"
-          v-for="item in skins"
+          v-for="(item, index) in skins"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="优惠券" class="stab flex-containerX">
         <bag-item
-          :key="item"
-          v-for="item in coupons"
+          :key="index + 'S'"
+          v-for="(item, index) in coupons"
           :label="item.name"
           :icon="item.icon"
         ></bag-item>

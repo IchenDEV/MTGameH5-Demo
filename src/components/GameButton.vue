@@ -89,9 +89,6 @@ export default {
     font-size: 1.1rem;
     white-space: nowrap;
     font-family: "bwrite";
-    overflow-x: visible;
-    overflow-y: visible;
-    overflow: auto;
   }
   .icon {
     font-size: 1.5rem;

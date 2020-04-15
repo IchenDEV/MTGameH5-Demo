@@ -1,5 +1,6 @@
 <template>
   <div class="flex-itemX">
+    <el-image style="width: 100px; height: 100px" :src="url"></el-image>
     <div class="label">{{ label }}</div>
     <el-button
       v-if="mode === 'use'"
@@ -35,6 +36,8 @@ export default {
     label: String,
     icon: String,
     color: String,
+    count: Number,
+    url: String,
     mode: {
       validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
