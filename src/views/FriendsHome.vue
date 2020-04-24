@@ -1,31 +1,38 @@
 <template>
   <div class="home">
-    <x-d-map-panel v-if="$store.state.XDMap"></x-d-map-panel>
-    <div v-else class="background"></div>
+    <div class="background"></div>
     <div class="top">
-      <user-avatar :Lv="$store.state.level"></user-avatar>
+      <StationPanel></StationPanel>
     </div>
-    <vue-live2d class="center" :modelPath="$store.state.modelPath"></vue-live2d>
-    <div class="buttom">
+
+    <vue-star class="buttom" animate="animated bounceIn">
       <game-button
+        slot="icon"
         label="点赞"
         size="small"
         icon="icon-chengjiu"
-        @click="achClicked()"
       ></game-button>
+    </vue-star>
+
+    <vue-star class="buttom" style="right:0.5rem;" animate="animated bounceIn">
       <game-button
+        slot="icon"
         label="投食"
         size="small"
         icon="icon-tubiaozhizuomoban-"
-        @click="bagClicked"
       ></game-button>
+    </vue-star>
+
+    <div class="buttom">
+      <user-avatar style="top:1.4rem;" :Lv="level"></user-avatar>
     </div>
+
     <div class="right">
       <game-button
-        label="好友"
+        label="返回"
         size="small"
-        icon="icon-haoyou"
-        @click="friendClicked()"
+        icon="icon-chengjiu"
+        @click="backClicked"
       ></game-button>
       <game-button
         label="设置"
@@ -43,41 +50,38 @@
 // @ is an alias to /src
 import GameButton from "../components/GameButton";
 import UserAvatar from "../components/UserAvatar";
-import XDMapPanel from "../components/XDMapPanel";
+import StationPanel from "../components/StationPanel";
+import VueStar from "vue-star";
 export default {
   name: "Home",
   components: {
     GameButton,
     UserAvatar,
-    XDMapPanel
+    StationPanel,
+    VueStar
+  },
+  computed: {
+    level: function() {
+      return this.$store.getters.friendInfo(this.$route.params.id).level;
+    }
+  },
+  mounted() {
+    this.$store.state.currentOrder = this.$store.getters.friendInfo(
+      this.$route.params.id
+    ).modelOrder;
   },
   methods: {
     settingClicked() {
       this.$router.push("/about");
     },
-    eventClicked() {
-      this.$router.push("/event");
+    backClicked() {
+      this.$router.push("/");
     },
-    arClicked() {
-      this.$router.push("/ar");
-    },
-    bagClicked() {
-      this.$router.push("/bag");
-    },
-    storeClicked() {
-      this.$router.push("/store");
-    },
-    achClicked() {
-      this.$router.push("/achievement");
-    },
-    friendClicked() {
+    foodClicked() {
       this.$router.push("/friend");
     },
-    notifyClick() {
-      this.$router.push("/notify");
-    },
-    gameClick() {
-      this.$router.push("/game");
+    likeClicked() {
+      this.$router.push("/friend");
     },
     userClicked() {
       this.$router.push("/user");
@@ -116,5 +120,8 @@ export default {
 }
 .center {
   width: 100%;
+}
+.amap-geolocation-con .amap-logo .amap-copyright {
+  z-index: auto !important;
 }
 </style>

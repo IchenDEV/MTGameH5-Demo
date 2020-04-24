@@ -3,11 +3,11 @@
     <h1>设置</h1>
     <div class="flex-container">
       <h4 class="header">背景音乐</h4>
-      <el-switch v-model="$store.state.playBackmusic"></el-switch>
+      <el-switch v-model="music"></el-switch>
     </div>
     <div class="flex-container">
       <h4 class="header">3D 地图</h4>
-      <el-switch v-model="$store.state.XDMap"></el-switch>
+      <el-switch v-model="XDMap"></el-switch>
     </div>
     <div class="flex-container">
       <h4 class="header">音效</h4>
@@ -31,16 +31,42 @@
   </div>
 </template>
 <script>
-// @ is an alias to /src
 export default {
   name: "About",
-  data: () => {
+  data: function() {
     return {
-      music: false,
       sound: true,
-      notify: true,
-      nickName: "宠物大师"
+      notify: true
     };
+  },
+  mounted() {
+    this.$store.state.showLive2D = false;
+  },
+  computed: {
+    music: {
+      get: function() {
+        return this.$store.getters.playBackgroundMusic;
+      },
+      set: function(newOne) {
+        this.$store.commit("setIsPlayBackgroundMusic", newOne);
+      }
+    },
+    XDMap: {
+      get: function() {
+        return this.$store.getters.use3DMap;
+      },
+      set: function(newOne) {
+        this.$store.commit("set3DMap", newOne);
+      }
+    },
+    nickName: {
+      get: function() {
+        return this.$store.getters.petInfo.name;
+      },
+      set: function(newOne) {
+        this.$store.commit("set3DMap", newOne);
+      }
+    }
   }
 };
 </script>

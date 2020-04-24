@@ -26,9 +26,3 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
-.tabs {
-  border-radius: 2rem;
-  overflow: hidden;
-}
-</style>

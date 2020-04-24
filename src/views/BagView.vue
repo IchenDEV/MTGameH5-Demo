@@ -40,7 +40,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import BottomPanel from "../components/BottomPanel";
 import BagItem from "../components/BagItem";
 export default {
@@ -75,7 +74,9 @@ export default {
   methods: {
     useSkin(name) {
       let path = { path: "/live2d/" + name + "/" + name + ".model.json" };
-      this.$store.state.modelPath.path = path;
+      let pet = this.$store.state.pet;
+      pet.model.path = path;
+      this.$store.dispatch("updatePetInfo", pet);
       this.$router.push("/");
     }
   }

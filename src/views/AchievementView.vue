@@ -5,7 +5,7 @@
       <el-tab-pane label="成就1">
         <div>
           <p style="color:#9475FF;line-height:5px">
-            成就1是这个游戏的第一个成就
+            和宠物互动10次
           </p>
           <h4 style="line-height:5px;align:center;">当前进度</h4>
           <progress value="80" max="100"></progress>
@@ -14,7 +14,7 @@
       <el-tab-pane label="成就2">
         <div>
           <p style="color:#9475FF;line-height:5px">
-            成就2是这个游戏的第二个成就
+            和宠物互动10次
           </p>
           <h4 style="line-height:5px;align:center;">当前进度</h4>
           <progress value="60" max="100"></progress>
@@ -23,7 +23,7 @@
       <el-tab-pane label="成就3">
         <div>
           <p style="color:#9475FF;line-height:5px">
-            成就3是这个游戏的第三个成就
+            和宠物互动10次
           </p>
           <h4 style="line-height:5px;align:center;">当前进度</h4>
           <progress value="30" max="100"></progress>
@@ -41,9 +41,3 @@ export default {
   components: { BottomPanel }
 };
 </script>
-<style lang="less" scoped>
-.tabs {
-  border-radius: 2rem;
-  overflow: hidden;
-}
-</style>

@@ -6,17 +6,11 @@
         <td style="width:80%">名称</td>
         <td style="width:20%">等级</td>
       </tr>
-      <tr>
-        <a href="#" style="text-decoration:none;">
-          <td style="color:#4D6AEB">法外狂徒_张三</td>
+      <tr v-for="(i, index) in friends" :key="index">
+        <a @click="friendClicked(i)" style="text-decoration:none;">
+          <td style="color:#4D6AEB">{{ i.name }}</td>
         </a>
-        <td>23</td>
-      </tr>
-      <tr>
-        <a href="#" style="text-decoration:none;">
-          <td style="color:#4D6AEB">几何大师欧几里得</td>
-        </a>
-        <td>200</td>
+        <td>{{ i.level }}</td>
       </tr>
     </table>
   </bottom-panel>
@@ -27,12 +21,16 @@
 import BottomPanel from "../components/BottomPanel";
 export default {
   name: "FriendView",
-  components: { BottomPanel }
+  components: { BottomPanel },
+  computed: {
+    friends: function() {
+      return this.$store.getters.userInfo.friends;
+    }
+  },
+  methods: {
+    friendClicked(i) {
+      this.$router.push("/friendhome/" + i.id);
+    }
+  }
 };
 </script>
-<style lang="less" scoped>
-.tabs {
-  border-radius: 2rem;
-  overflow: hidden;
-}
-</style>

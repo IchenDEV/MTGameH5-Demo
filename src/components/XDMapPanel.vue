@@ -10,7 +10,8 @@ export default {
   name: "XDMapPanel",
   data() {
     return {
-      map: null
+      map: null,
+      getlocation: null
     };
   },
   methods: {
@@ -49,7 +50,7 @@ export default {
           zoomToAccuracy: false //定位成功后是否自动调整地图视野到定位点
         });
         this.map.addControl(geolocation);
-        window.setInterval(() => {
+        this.getlocation = window.setInterval(() => {
           geolocation.getCurrentPosition((status, result) => {
             if (status == "complete") {
               onComplete(result);
@@ -71,15 +72,15 @@ export default {
         console.log(str);
       }
       //解析定位错误信息
-      function onError(data) {
-        document.getElementById("status").innerHTML = "定位失败";
-        document.getElementById("result").innerHTML =
-          "失败原因排查信息:" + data.message;
-      }
+      function onError(data) {}
     }
   },
   mounted() {
     this.mapInit();
+  },
+  beforeDestroy() {
+    this.map.destroy();
+    window.clearInterval(this.getlocation);
   }
 };
 </script>

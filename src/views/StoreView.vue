@@ -108,13 +108,3 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
-.tabs {
-  border-radius: 2rem;
-  overflow: hidden;
-}
-.stab {
-  height: 200px;
-  overflow: auto;
-}
-</style>

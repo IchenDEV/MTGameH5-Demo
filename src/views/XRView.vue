@@ -18,6 +18,9 @@ export default {
   name: "XRView",
   components: {
     fucard
+  },
+  mounted() {
+    this.$store.state.showLive2D = false;
   }
 };
 </script>

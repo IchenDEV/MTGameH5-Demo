@@ -68,7 +68,7 @@ const routes = [
     path: "/friendhome/:id",
     name: "FriendHome",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/FriendHome.vue")
+      import(/* webpackChunkName: "about" */ "../views/FriendsHome.vue")
   }
 ];
 

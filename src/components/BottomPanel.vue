@@ -25,11 +25,12 @@ export default {
   padding: 1rem;
   padding-top: 0.5rem;
   box-sizing: border-box;
-  z-index: 200;
+  z-index: 10200;
   overflow: visible;
   max-height: 80%;
 }
 .pxb {
+  z-index: 10000;
   position: fixed;
   width: 100%;
   height: 100%;

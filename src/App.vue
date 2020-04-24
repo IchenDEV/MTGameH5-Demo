@@ -3,7 +3,13 @@
     <transition name="el-zoom-in-top">
       <router-view />
     </transition>
-    <audio autoplay="autoplay" id="music1">
+    <vue-live2d
+      class="center"
+      v-show="$store.state.showLive2D"
+      :order="order"
+      :modelPath="$store.state.models"
+    ></vue-live2d>
+    <audio autoplay="autoplay" id="music1" v-if="musicBack">
       <source src="./assets/music/backmusic.mp3" />
     </audio>
   </div>
@@ -13,33 +19,53 @@
 export default {
   name: "App",
   computed: {
-    // 计算属性的 getter
-    playBackmusic: function() {
-      // `this` 指向 vm 实例
-      return this.$store.state.playBackmusic;
-    }
-  },
-  watch: {
-    // 如果 `question` 发生改变，这个函数就会运行
-    // eslint-disable-next-line no-unused-vars
-    playBackmusic: function(newOne, oldOne) {
-      var audio = document.getElementById("music1");
-      if (newOne) {
-        audio.play(); // 播放
-      } else {
-        audio.pause(); // 暂停
-      }
+    musicBack: function() {
+      return this.$store.getters.playBackgroundMusic;
+    },
+    order: function() {
+      return this.$store.state.currentOrder;
     }
   }
 };
 </script>
-<style lang="less" scoped>
-F .tabs {
-  border-radius: 2rem;
-  overflow: hidden;
+<style>
+.background {
+  background-image: url(/img/city1.jpg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.4;
+}
+.buttom {
+  bottom: 0.5rem;
+  margin: 0.5rem;
+  position: fixed;
+  z-index: 10000;
+}
+.top {
+  top: 0.5rem;
+  margin: 0.5rem;
+  position: fixed;
+  z-index: 10000;
+}
+.right {
+  right: 0;
+  display: grid;
+  margin: 0.5rem;
+  position: fixed;
+  z-index: 10000;
+}
+
+.amap-geolocation-con .amap-logo .amap-copyright {
+  z-index: auto !important;
 }
 </style>
 <style lang="less">
+.tabs {
+  overflow: hidden;
+}
 body {
   padding: 0;
   margin: 0;
@@ -51,7 +77,9 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-
+.center {
+  width: 100%;
+}
 #nav {
   padding: 30px;
 
@@ -84,11 +112,8 @@ body {
   border: 0;
   flex-wrap: wrap;
 }
-.tabs {
-  border-radius: 2rem;
-  overflow: hidden;
-}
 .stab {
+  max-height: 500px;
   padding-bottom: 10rem;
   overflow: scroll;
 }
