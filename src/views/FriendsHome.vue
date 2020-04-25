@@ -1,10 +1,6 @@
 <template>
   <div class="home">
     <div class="background"></div>
-    <div class="top">
-      <StationPanel></StationPanel>
-    </div>
-
     <vue-star class="buttom" animate="animated bounceIn">
       <game-button
         slot="icon"
@@ -50,14 +46,12 @@
 // @ is an alias to /src
 import GameButton from "../components/GameButton";
 import UserAvatar from "../components/UserAvatar";
-import StationPanel from "../components/StationPanel";
 import VueStar from "vue-star";
 export default {
   name: "Home",
   components: {
     GameButton,
     UserAvatar,
-    StationPanel,
     VueStar
   },
   computed: {

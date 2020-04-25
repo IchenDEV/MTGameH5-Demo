@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <x-d-map-panel v-if="XDMap"></x-d-map-panel>
-    <div v-else class="background"></div>
+    <div v-if="!XDMap" class="background"></div>
     <div class="top">
       <StationPanel></StationPanel>
     </div>
@@ -69,14 +68,12 @@
 // @ is an alias to /src
 import GameButton from "../components/GameButton";
 import UserAvatar from "../components/UserAvatar";
-import XDMapPanel from "../components/XDMapPanel";
 import StationPanel from "../components/StationPanel";
 export default {
   name: "Home",
   components: {
     GameButton,
     UserAvatar,
-    XDMapPanel,
     StationPanel
   },
   computed: {

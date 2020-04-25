@@ -3,6 +3,10 @@
     <transition name="el-zoom-in-top">
       <router-view />
     </transition>
+    <x-d-map-panel
+      v-if="XDMap"
+      v-show="$store.state.showLive2D"
+    ></x-d-map-panel>
     <vue-live2d
       class="center"
       v-show="$store.state.showLive2D"
@@ -16,14 +20,21 @@
 </template>
 <script>
 // @ is an alias to /src
+import XDMapPanel from "../src/components/XDMapPanel";
 export default {
   name: "App",
+  components: {
+    XDMapPanel
+  },
   computed: {
     musicBack: function() {
       return this.$store.getters.playBackgroundMusic;
     },
     order: function() {
       return this.$store.state.currentOrder;
+    },
+    XDMap: function() {
+      return this.$store.getters.use3DMap;
     }
   }
 };

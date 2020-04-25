@@ -83,7 +83,7 @@ export default {
 .back {
   background-color: white;
   padding: 0.6rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .flex-container {
   display: flex;

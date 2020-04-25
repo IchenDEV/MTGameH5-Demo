@@ -4,7 +4,7 @@
     :class="buttonSize"
     @click="$emit('click')"
   >
-    <div style="padding-top:0.5rem;">
+    <div style="padding-top:0.5rem;overflow: -webkit-paged-x;">
       <i class="icon iconfont" :class="icon" aria-hidden="true"></i>
       <div class="label">{{ label }}</div>
     </div>
