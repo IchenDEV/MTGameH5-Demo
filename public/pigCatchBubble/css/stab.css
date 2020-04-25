@@ -1,0 +1,16 @@
+#theme{
+    position: absolute;
+    color: hotpink;
+    right: 30px;
+    top: 0;
+}
+#health{
+    top: 5px;
+    color: red;
+}
+#score{
+    color: salmon;
+}
+#background_image{
+    z-index: 10;
+}

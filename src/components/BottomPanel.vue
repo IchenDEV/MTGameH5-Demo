@@ -1,7 +1,7 @@
 <template>
   <div class="pxb">
     <div class="pxb" @click="$router.go(-1)"></div>
-    <div class="panel ms-depth-16">
+    <div class="panelx ms-depth-16">
       <slot></slot>
     </div>
   </div>
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 <style lang="css" scoped>
-.panel {
+.panelx {
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   position: fixed;

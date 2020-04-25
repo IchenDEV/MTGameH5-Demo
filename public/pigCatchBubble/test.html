@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/animate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1 {
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-iteration-count:infinite;
+        text-align:center
+    }
+    </style>
+</head>
+<body>
+    <h1 id="1">70s</h1>
+</body>
+</html>
+<script>
+    var t=70;
+    var h1=document.getElementById("1");
+    h1.classList.add('animated','infinite','tada');
+    var time=setInterval(function(){
+        if(t==1)
+            clearInterval(time);
+        t--;
+        h1.innerHTML=String(t)+"s";
+    },1000)
+</script>

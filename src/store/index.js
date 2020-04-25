@@ -17,16 +17,16 @@ export default new Vuex.Store({
         path: "/live2d/tororo/tororo.model.json"
       }
     ],
-    pet: {
-      name: "次郎",
-      level: 10,
-      exp: 2000,
-      modelOrder: 1
-    },
     user: {
       id: 0,
       basicInfo: {},
       level: 10,
+      pet: {
+        name: "次郎",
+        level: 10,
+        exp: 2000,
+        modelOrder: 1
+      },
       friends: [
         {
           id: 1,
@@ -43,25 +43,114 @@ export default new Vuex.Store({
       ],
       notification: [
         {
+          id: 0,
           title: "标题",
           msg: "Test",
-          sender: "fucker"
+          sender: "fucker",
+          isRead: false
+        },
+        {
+          id: 1,
+          title: "标题",
+          msg: "Test",
+          sender: "fucker",
+          isRead: false
+        },
+        {
+          id: 2,
+          title: "标题",
+          msg: "Test",
+          sender: "fucker",
+          isRead: true
+        },
+        {
+          id: 3,
+          title: "Hello",
+          msg: "nihao",
+          sender: "fucker",
+          isRead: false
+        }
+      ],
+      bag: [
+        {
+          label: "食物",
+          items: [
+            { id: 1, name: "小鱼干", icon: "", count: 1 },
+            { id: 1, name: "冻干", icon: "", count: 1 },
+            { id: 1, name: "罐头", icon: "", count: 1 },
+            { id: 1, name: "帝王蟹", icon: "", count: 1 },
+            { id: 1, name: "白开水", icon: "", count: 1 },
+            { id: 1, name: "卡布奇诺", icon: "", count: 1 },
+            { id: 1, name: "猫屎咖啡", icon: "", count: 1 }
+          ]
+        },
+        {
+          label: "皮肤",
+          items: [
+            { id: 1, name: "折耳", icon: "" },
+            { id: 1, name: "布偶", icon: "" },
+            { id: 1, name: "美短", icon: "" },
+            { id: 1, name: "折耳", icon: "" }
+          ]
+        },
+        {
+          label: "优惠券",
+          items: [
+            { id: 1, name: "4.8折", icon: "" },
+            { id: 1, name: "3.8折", icon: "" },
+            { id: 1, name: "2.8折", icon: "" },
+            { id: 1, name: "1.8折", icon: "" }
+          ]
+        },
+        { label: "福卡", items: [{ id: 1, name: "西湖福", icon: "" }] }
+      ],
+      achievents: [
+        {
+          name: "星星之火",
+          description: "FFFFFFF",
+          isGet: false
         }
       ]
     },
-    achievents: [
+    store: [
       {
-        name: "星星之火",
-        description: "FFFFFFF",
-        isGet: false
+        label: "食物",
+        items: [
+          { id: 1, name: "小鱼干", icon: "" },
+          { id: 1, name: "冻干", icon: "" },
+          { id: 1, name: "罐头", icon: "" },
+          { id: 1, name: "帝王蟹", icon: "" },
+          { id: 1, name: "白开水", icon: "" },
+          { id: 1, name: "卡布奇诺", icon: "" },
+          { id: 1, name: "猫屎咖啡", icon: "" }
+        ]
+      },
+      {
+        label: "皮肤",
+        items: [
+          { id: 1, name: "折耳", icon: "" },
+          { id: 1, name: "布偶", icon: "" },
+          { id: 1, name: "美短", icon: "" },
+          { id: 1, name: "折耳", icon: "" }
+        ]
+      },
+      {
+        label: "优惠券",
+        items: [
+          { id: 1, name: "4.8折", icon: "" },
+          { id: 1, name: "3.8折", icon: "" },
+          { id: 1, name: "2.8折", icon: "" },
+          { id: 1, name: "1.8折", icon: "" }
+        ]
       }
     ],
-
+    station: {
+      next: "龙翔桥"
+    },
     system: {
       playBackmusic: true,
       XDMap: true
-    },
-    isReload: true
+    }
   },
   getters: {
     playBackgroundMusic: state => {
@@ -73,10 +162,13 @@ export default new Vuex.Store({
       return state.system.XDMap === "false" ? false : true;
     },
     petInfo: state => {
-      return state.pet;
+      return state.user.pet;
     },
     userInfo: state => {
       return state.user;
+    },
+    storeInfo: state => {
+      return state.store;
     },
     friendInfo: state => id => {
       let asx;
@@ -87,6 +179,9 @@ export default new Vuex.Store({
         }
       });
       return asx;
+    },
+    stationInfo: state => {
+      return state.station;
     }
   },
   mutations: {
@@ -99,7 +194,7 @@ export default new Vuex.Store({
       state.system.XDMap = canUse;
     },
     setPetInfo(state, Info) {
-      state.pet = Info;
+      state.user.pet = Info;
     }
   },
   actions: {

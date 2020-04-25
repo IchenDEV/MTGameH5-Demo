@@ -4,9 +4,10 @@
     <div class="stab flex-containerX">
       <bag-item
         mode="play"
-        :key="item"
-        v-for="item in games"
-        :label="item"
+        :key="ix"
+        v-for="(item, ix) in games"
+        @action="playGame(item)"
+        :label="item.name"
       ></bag-item>
     </div>
   </bottom-panel>
@@ -21,8 +22,21 @@ export default {
   components: { BottomPanel, BagItem },
   data() {
     return {
-      games: ["Swing"]
+      games: [
+        {
+          id: 0,
+          name: "Swing",
+          icon: "",
+          link: "../../pigCatchBubble/pig.html"
+        }
+      ]
     };
+  },
+  methods: {
+    playGame(item) {
+      console.log(1312);
+      window.location = item.link;
+    }
   }
 };
 </script>

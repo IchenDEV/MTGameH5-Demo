@@ -10,7 +10,7 @@
         slot="icon"
         label="点赞"
         size="small"
-        icon="icon-chengjiu"
+        icon="icon-dianzan"
       ></game-button>
     </vue-star>
 
@@ -19,7 +19,7 @@
         slot="icon"
         label="投食"
         size="small"
-        icon="icon-tubiaozhizuomoban-"
+        icon="icon-yu"
       ></game-button>
     </vue-star>
 
@@ -31,7 +31,7 @@
       <game-button
         label="返回"
         size="small"
-        icon="icon-chengjiu"
+        icon="icon-fanhui"
         @click="backClicked"
       ></game-button>
       <game-button

@@ -29,6 +29,12 @@ export default {
 };
 </script>
 <style>
+.el-message-box {
+  width: 300px !important;
+}
+.el-message-box__wrapper {
+  z-index: 1000000 !important;
+}
 .background {
   background-image: url(/img/city1.jpg);
   width: 100%;

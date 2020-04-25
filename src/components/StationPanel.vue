@@ -1,9 +1,9 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
-    <div style="padding: 14px;width:200px;">
+    <div class="panel2">
       <span>下一站</span>
       <div class="bottom clearfix">
-        <el-button type="text" class="button">龙翔桥</el-button>
+        <el-button type="text" class="button">{{ station.next }}</el-button>
       </div>
     </div>
   </el-card>
@@ -17,6 +17,11 @@ export default {
     icon: String,
     color: String
   },
+  computed: {
+    station: function() {
+      return this.$store.getters.stationInfo;
+    }
+  },
   methods: {
     action() {
       this.$emit("action", this.label);
@@ -25,6 +30,12 @@ export default {
 };
 </script>
 <style>
+.panel2 {
+  padding: 14px;
+  width: 180px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+}
 .label {
   margin-left: auto;
   margin-right: auto;

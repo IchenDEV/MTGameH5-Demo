@@ -11,11 +11,6 @@ const routes = [
     component: Home,
     children: [
       {
-        path: "Event",
-        component: () =>
-          import(/* webpackChunkName: "about" */ "../views/EventView.vue")
-      },
-      {
         path: "Bag",
         component: () =>
           import(/* webpackChunkName: "about" */ "../views/BagView.vue")

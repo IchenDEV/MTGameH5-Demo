@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #plane {
+        position: absolute;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>加油奥利给小队</title>
+    <link rel="stylesheet" type="text/css" href="css/stab.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        #title {
+            animation-duration: 3s;
+            animation-delay: 0s;
+            animation-iteration-count:infinite;
+            text-align:center;
+            color: coral;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">欢迎来到小猪抓泡泡游戏！</h1>
+    <div style="height:100%;width: 100%;" id="backGounrd">
+        <video autoplay muted loop style="position: fixed; right: 0; bottom: 0;min-width: 100%; min-height: 100%;width: auto; height: auto; z-index: -100;" webkit-playsinline="true">
+            <source src="media/mc.mp4">
+        </video>
+    </div>
+    <div id="bubble1" style="position: absolute; left: 50px; top: 50px;color: blue;"  >
+        <img alt="" src="media/Bubble_Orange.png" width="100px" height="100px" >
+    </div>
+    
+    <div id="plane">
+        <img src="media/pig.png" alt="" style="height: 150px;width: 150px;">
+     </div>
+
+    <script src="javascript/pig_move.js"></script>
+    <!--<script src="javascript/bubble_move.js"></script>-->
+</body>
+
+</html>

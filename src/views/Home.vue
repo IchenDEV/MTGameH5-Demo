@@ -33,18 +33,14 @@
       ></game-button>
     </div>
     <div class="right">
-      <game-button
-        label="任务"
-        size="small"
-        icon="icon-renwu1"
-        @click="eventClicked"
-      ></game-button>
-      <game-button
-        label="通知"
-        size="small"
-        icon="icon-tongzhi"
-        @click="notifyClick"
-      ></game-button>
+      <el-badge value="new" class="item">
+        <game-button
+          label="通知"
+          size="small"
+          icon="icon-tongzhi"
+          @click="notifyClick"
+        ></game-button>
+      </el-badge>
       <game-button
         label="好友"
         size="small"
@@ -60,7 +56,7 @@
       <game-button
         label="AR"
         size="small"
-        icon="icon-renwu1"
+        icon="icon-ar"
         @click="arClicked"
       ></game-button>
     </div>
@@ -99,9 +95,6 @@ export default {
     settingClicked() {
       this.$router.push("/about");
     },
-    eventClicked() {
-      this.$router.push("/event");
-    },
     arClicked() {
       this.$router.push("/ar");
     },
@@ -129,3 +122,9 @@ export default {
   }
 };
 </script>
+<style>
+.el-badge__content.is-fixed {
+  top: 10px !important;
+  right: 30px !important;
+}
+</style>
