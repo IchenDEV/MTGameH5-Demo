@@ -76,18 +76,18 @@ export default new Vuex.Store({
           label: "食物",
           items: [
             { id: 1, name: "小鱼干", icon: "", count: 1 },
-            { id: 1, name: "冻干", icon: "", count: 1 },
+            { id: 1, name: "牛肉", icon: "", count: 1 },
             { id: 1, name: "罐头", icon: "", count: 1 },
             { id: 1, name: "帝王蟹", icon: "", count: 1 },
             { id: 1, name: "白开水", icon: "", count: 1 },
-            { id: 1, name: "卡布奇诺", icon: "", count: 1 },
-            { id: 1, name: "猫屎咖啡", icon: "", count: 1 }
+            { id: 1, name: "金枪鱼", icon: "", count: 1 },
+            { id: 1, name: "咖啡", icon: "", count: 1 }
           ]
         },
         {
           label: "皮肤",
           items: [
-            { id: 1, name: "折耳", icon: "" },
+            { id: 1, name: "中华田园猫", icon: "" },
             { id: 1, name: "布偶", icon: "" },
             { id: 1, name: "美短", icon: "" },
             { id: 1, name: "折耳", icon: "" }
@@ -117,18 +117,18 @@ export default new Vuex.Store({
         label: "食物",
         items: [
           { id: 1, name: "小鱼干", icon: "" },
-          { id: 1, name: "冻干", icon: "" },
+          { id: 1, name: "牛肉", icon: "" },
           { id: 1, name: "罐头", icon: "" },
           { id: 1, name: "帝王蟹", icon: "" },
           { id: 1, name: "白开水", icon: "" },
-          { id: 1, name: "卡布奇诺", icon: "" },
-          { id: 1, name: "猫屎咖啡", icon: "" }
+          { id: 1, name: "金枪鱼", icon: "" },
+          { id: 1, name: "咖啡", icon: "" }
         ]
       },
       {
         label: "皮肤",
         items: [
-          { id: 1, name: "折耳", icon: "" },
+          { id: 1, name: "中华田园猫", icon: "" },
           { id: 1, name: "布偶", icon: "" },
           { id: 1, name: "美短", icon: "" },
           { id: 1, name: "折耳", icon: "" }
