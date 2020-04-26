@@ -76,18 +76,18 @@ export default new Vuex.Store({
           label: "食物",
           items: [
             { id: 1, name: "小鱼干", icon: "", count: 1 },
-            { id: 1, name: "牛肉", icon: "", count: 1 },
+            { id: 1, name: "牛肉", icon: "./img/beef.png", count: 1 },
             { id: 1, name: "罐头", icon: "", count: 1 },
             { id: 1, name: "帝王蟹", icon: "", count: 1 },
             { id: 1, name: "白开水", icon: "", count: 1 },
             { id: 1, name: "金枪鱼", icon: "", count: 1 },
-            { id: 1, name: "咖啡", icon: "", count: 1 }
+            { id: 1, name: "咖啡", icon: "./img/coffee.png", count: 1 }
           ]
         },
         {
           label: "皮肤",
           items: [
-            { id: 1, name: "中华田园猫", icon: "" },
+            { id: 1, name: "中华田园猫", icon: "./img/buou.png" },
             { id: 1, name: "布偶", icon: "" },
             { id: 1, name: "美短", icon: "" },
             { id: 1, name: "折耳", icon: "" }
@@ -96,10 +96,10 @@ export default new Vuex.Store({
         {
           label: "优惠券",
           items: [
-            { id: 1, name: "4.8折", icon: "" },
-            { id: 1, name: "3.8折", icon: "" },
-            { id: 1, name: "2.8折", icon: "" },
-            { id: 1, name: "1.8折", icon: "" }
+            { id: 1, name: "4.8折", icon: "./img/48zhe.png" },
+            { id: 2, name: "3.8折", icon: "./img/38zhe.png" },
+            { id: 3, name: "2.8折", icon: "./img/28zhe.png" },
+            { id: 4, name: "1.8折", icon: "./img/18zhe.png" }
           ]
         },
         { label: "福卡", items: [{ id: 1, name: "西湖福", icon: "" }] }
@@ -137,10 +137,10 @@ export default new Vuex.Store({
       {
         label: "优惠券",
         items: [
-          { id: 1, name: "4.8折", icon: "" },
-          { id: 1, name: "3.8折", icon: "" },
-          { id: 1, name: "2.8折", icon: "" },
-          { id: 1, name: "1.8折", icon: "" }
+          { id: 1, name: "4.8折", icon: "./img/48zhe.png" },
+          { id: 1, name: "3.8折", icon: "./img/38zhe.png" },
+          { id: 1, name: "2.8折", icon: "./img/28zhe.png" },
+          { id: 1, name: "1.8折", icon: "./img/18zhe.png" }
         ]
       }
     ],

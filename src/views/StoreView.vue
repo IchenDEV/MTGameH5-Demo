@@ -17,7 +17,7 @@
           mode="buy"
           v-for="(item, index) in ix.items"
           :label="item.name"
-          :icon="item.icon"
+          :url="item.icon"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="积分捐赠" class="stab">

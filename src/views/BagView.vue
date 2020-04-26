@@ -13,7 +13,7 @@
           mode="use"
           v-for="(item, index) in ix.items"
           :label="item.name"
-          :icon="item.icon"
+          :url="item.icon"
         ></bag-item>
       </el-tab-pane>
     </el-tabs>
