@@ -87,7 +87,11 @@ export default new Vuex.Store({
         {
           label: "皮肤",
           items: [
-            { id: 1, name: "中华田园猫", icon: "./img/zhonghuatianyuanmao.png" },
+            {
+              id: 1,
+              name: "中华田园猫",
+              icon: "./img/zhonghuatianyuanmao.png"
+            },
             { id: 1, name: "布偶", icon: "./img/buou.png" },
             { id: 1, name: "美短", icon: "./img/meiduan.png" },
             { id: 1, name: "折耳", icon: "./img/zheer.png" }
@@ -102,7 +106,10 @@ export default new Vuex.Store({
             { id: 4, name: "1.8折", icon: "./img/18zhe.png" }
           ]
         },
-        { label: "福卡", items: [{ id: 1, name: "西湖福", icon: "./img/xihu.png" }] }
+        {
+          label: "福卡",
+          items: [{ id: 1, name: "西湖福", icon: "./img/xihu.png" }]
+        }
       ],
       achievents: [
         {
