@@ -19,6 +19,7 @@ export default new Vuex.Store({
     ],
     user: {
       id: 0,
+      LvUp: false,
       basicInfo: {},
       level: 10,
       pet: {

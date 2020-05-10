@@ -8,6 +8,7 @@
       v-show="$store.state.showLive2D"
     ></x-d-map-panel>
     <vue-live2d
+      slot="reference"
       class="center"
       v-show="$store.state.showLive2D"
       :order="order"
@@ -133,5 +134,19 @@ body {
   max-height: 500px;
   padding-bottom: 10rem;
   overflow: scroll;
+}
+</style>
+<style lang="css">
+.dialog {
+  z-index: 100002 !important;
+}
+.el-dialog,
+.el-pager li {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+.el-notification {
+  z-index: 100010 !important;
 }
 </style>

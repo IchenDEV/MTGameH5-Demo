@@ -10,11 +10,15 @@
       >
       </game-button>
     </h1>
-    <div
-      style="display: flex;width:100%;height:100%;overflow:auto"
-    >
-      <fucard :show-button="false" style="transform: scale(6) translate(30px, 50px);max-width:300px;"></fucard
-      ><fucard :show-button="false" style="transform: scale(6) translate(60px, 50px);max-width:300px;"></fucard>
+    <div style="display: flex;width:100%;height:100%;overflow:auto">
+      <fucard
+        :show-button="false"
+        style="transform: scale(6) translate(30px, 50px);max-width:300px;"
+      ></fucard
+      ><fucard
+        :show-button="false"
+        style="transform: scale(6) translate(60px, 50px);max-width:300px;"
+      ></fucard>
     </div>
   </div>
 </template>

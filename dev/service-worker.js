@@ -1,5 +1,5 @@
 var cacheName = "js13kPWA-v1";
-var appShellFiles = ["/fonts", "/live2d", "/media", "/img", "/fonts"];
+var appShellFiles = ["/fonts/OPPOSans-B.ttf", "/live2d/hijiki/moc/hijiki.moc", "/live2d/tororo/moc/tororo.moc","/media/backmusic.2148e91f", "/img"];
 
 var contentToCache = appShellFiles;
 

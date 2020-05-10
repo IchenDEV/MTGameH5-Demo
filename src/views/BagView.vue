@@ -14,6 +14,7 @@
           v-for="(item, index) in ix.items"
           :label="item.name"
           :url="item.icon"
+          @action="useSomething"
         ></bag-item>
       </el-tab-pane>
     </el-tabs>
@@ -32,6 +33,9 @@ export default {
     }
   },
   methods: {
+    useSomething() {
+      this.$store.state.user.LvUp = true;
+    },
     useSkin(name) {
       let path = { path: "/live2d/" + name + "/" + name + ".model.json" };
       let pet = this.$store.state.pet;

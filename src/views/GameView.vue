@@ -28,6 +28,12 @@ export default {
           name: "Swing",
           icon: "",
           link: "../../pigCatchBubble/pig.html"
+        },
+        {
+          id: 1,
+          name: "Swing",
+          icon: "",
+          link: "../../pigCatchBubble/bubble.html"
         }
       ]
     };

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <lv-up :dialogVisible="$store.state.user.LvUp"></lv-up>
     <div v-if="!XDMap" class="background"></div>
     <div class="top">
       <StationPanel></StationPanel>
@@ -69,12 +70,14 @@
 import GameButton from "../components/GameButton";
 import UserAvatar from "../components/UserAvatar";
 import StationPanel from "../components/StationPanel";
+import LvUp from "../components/LvUp";
 export default {
   name: "Home",
   components: {
     GameButton,
     UserAvatar,
-    StationPanel
+    StationPanel,
+    LvUp
   },
   computed: {
     XDMap: function() {
@@ -123,5 +126,8 @@ export default {
 .el-badge__content.is-fixed {
   top: 10px !important;
   right: 30px !important;
+}
+.el-card {
+  background: transparent !important;
 }
 </style>

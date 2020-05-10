@@ -18,6 +18,7 @@
           v-for="(item, index) in ix.items"
           :label="item.name"
           :url="item.icon"
+          @action="pushSuccess"
         ></bag-item>
       </el-tab-pane>
       <el-tab-pane label="积分捐赠" class="stab">
@@ -37,6 +38,21 @@
         <el-button>确定捐赠</el-button>
       </el-tab-pane>
     </el-tabs>
+    <el-dialog
+      center
+      class="dialog"
+      title="购买成功"
+      :visible.sync="dialogVisible"
+      :show-close="false"
+    >
+      <span slot="footer" class="dialog-footer">
+        <div>恭喜获得</div>
+        <div>购买成功🎉</div>
+        <el-button type="primary" @click="dialogVisible = false"
+          >确 定</el-button
+        >
+      </span>
+    </el-dialog>
   </bottom-panel>
 </template>
 
@@ -50,7 +66,8 @@ export default {
   data() {
     return {
       num: 0,
-      isShow: -1
+      isShow: -1,
+      dialogVisible: false
     };
   },
   computed: {
@@ -59,6 +76,14 @@ export default {
     }
   },
   methods: {
+    pushSuccess() {
+      this.$notify({
+        title: "成功",
+        message: "购买成功",
+        type: "success",
+         duration: 0
+      });
+    },
     add() {
       this.num++;
     },
