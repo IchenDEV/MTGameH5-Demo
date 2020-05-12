@@ -312,7 +312,7 @@ export default {
           { lat: 30.2822875333, lng: 120.1172888 },
           { lat: 30.2822857667, lng: 120.1172464 }
         ],
-        time: 200,
+        time: 100,
         index: 0
       },
       useFakeData: true

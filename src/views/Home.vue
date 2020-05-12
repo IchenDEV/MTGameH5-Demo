@@ -6,7 +6,21 @@
       <StationPanel></StationPanel>
     </div>
     <div class="buttom">
-      <user-avatar style="top:1.4rem;" :Lv="level"></user-avatar>
+      <el-popover
+        ref="popover"
+        placement="right"
+        title="标题"
+        width="200"
+        trigger="focus"
+        content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。"
+      >
+      </el-popover>
+      <user-avatar
+        slot="reference"
+        style="top:1.4rem;"
+        :Lv="level"
+        @click="userClicked"
+      ></user-avatar>
       <game-button
         label="成就"
         size="small"
@@ -63,6 +77,15 @@
     <transition name="slide-fade">
       <router-view />
     </transition>
+    <el-dialog title="随机任务" :visible.sync="dialogVisible" width="80%">
+      <h3>请拜访一个好友，并给他点赞</h3>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">拒 绝</el-button>
+        <el-button type="primary" @click="dialogVisible = false"
+          >接 受</el-button
+        >
+      </span>
+    </el-dialog>
   </div>
 </template>
 <script>
@@ -79,6 +102,12 @@ export default {
     StationPanel,
     LvUp
   },
+  data() {
+    return {
+      dialogVisible: false,
+      visible: false
+    };
+  },
   computed: {
     XDMap: function() {
       return this.$store.getters.use3DMap;
@@ -90,6 +119,12 @@ export default {
   mounted() {
     this.$store.state.currentOrder = this.$store.getters.userInfo.modelOrder;
     this.$store.state.showLive2D = true;
+    window.setInterval(() => {
+      var rand = Math.floor(Math.random() * 30);
+      if (rand == 5) {
+        this.dialogVisible = !this.dialogVisible;
+      }
+    }, 1000);
   },
   methods: {
     settingClicked() {
@@ -117,6 +152,7 @@ export default {
       this.$router.push("/game");
     },
     userClicked() {
+      this.visible = !this.visible;
       this.$router.push("/user");
     }
   }

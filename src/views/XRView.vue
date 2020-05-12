@@ -4,6 +4,9 @@
       <ar-element :id="42">
         <fucard :show-button="true"></fucard>
       </ar-element>
+      <ar-element :id="6">
+        <fucard :show-button="true"></fucard>
+      </ar-element>
     </ar-view>
     <game-button
       label="福卡"
