@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     playGame(item) {
-      console.log(1312);
+      console.log(item.link);
       window.location = item.link;
     }
   }

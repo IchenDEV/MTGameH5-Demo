@@ -18,6 +18,7 @@
           v-for="(item, index) in ix.items"
           :label="item.name"
           :url="item.icon"
+          :number="item.pri"
           @action="pushSuccess"
         ></bag-item>
       </el-tab-pane>

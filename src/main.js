@@ -10,6 +10,8 @@ import "./assets/font/iconfont.css";
 import "./assets/font/iconfont.js";
 import { VueXR } from "vuexr";
 import VueLive2d from "vue-live2d-model";
+import ScratchCard from "vue-scratch-card0";
+Vue.use(ScratchCard);
 Vue.use(VueLive2d);
 Vue.config.productionTip = false;
 Vue.use(ElementUI);

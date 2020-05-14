@@ -14,6 +14,7 @@
           v-for="(item, index) in ix.items"
           :label="item.name"
           :url="item.icon"
+          :number="item.count"
           @action="useSomething"
         ></bag-item>
       </el-tab-pane>

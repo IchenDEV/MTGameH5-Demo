@@ -1,20 +1,11 @@
 <template>
   <div class="home">
-    <lv-up :dialogVisible="$store.state.user.LvUp"></lv-up>
+    <lv-up v-if="$store.state.user.LvUp"></lv-up>
     <div v-if="!XDMap" class="background"></div>
     <div class="top">
       <StationPanel></StationPanel>
     </div>
     <div class="buttom">
-      <el-popover
-        ref="popover"
-        placement="right"
-        title="标题"
-        width="200"
-        trigger="focus"
-        content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。"
-      >
-      </el-popover>
       <user-avatar
         slot="reference"
         style="top:1.4rem;"

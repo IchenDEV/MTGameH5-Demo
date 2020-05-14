@@ -145,6 +145,7 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
+  width: 80%;
 }
 .el-notification {
   z-index: 100010 !important;
