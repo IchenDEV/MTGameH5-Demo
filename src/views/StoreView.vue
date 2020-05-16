@@ -82,7 +82,7 @@ export default {
         title: "成功",
         message: "购买成功",
         type: "success",
-         duration: 0
+        duration: 0
       });
     },
     add() {

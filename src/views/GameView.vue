@@ -7,6 +7,7 @@
         :key="ix"
         v-for="(item, ix) in games"
         @action="playGame(item)"
+        :url="item.icon"
         :label="item.name"
       ></bag-item>
     </div>

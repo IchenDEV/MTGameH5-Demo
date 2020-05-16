@@ -17,6 +17,7 @@
     <audio autoplay="autoplay" id="music1" v-if="musicBack">
       <source src="./assets/music/backmusic.mp3" />
     </audio>
+    <img src="/img/bwt.png" height="30" class="logo" />
   </div>
 </template>
 <script>
@@ -147,7 +148,27 @@ body {
   border-radius: 1rem;
   width: 80%;
 }
+.el-dialog {
+  z-index: 100028 !important;
+}
+.el-dialog__wrapper {
+  z-index: 100028 !important;
+}
 .el-notification {
   z-index: 100010 !important;
+}
+.scale-control {
+  display: none;
+}
+[target="_blank"] {
+  display: none;
+}
+.logo-text {
+  display: none;
+}
+.logo {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0.5rem;
 }
 </style>
