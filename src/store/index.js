@@ -33,13 +33,15 @@ export default new Vuex.Store({
           id: 1,
           name: "法外狂徒张三",
           level: 11,
-          modelOrder: 2
+          modelOrder: 2,
+          state: "同地铁"
         },
         {
           id: 2,
           name: "几何大师欧几里得",
           level: 11,
-          modelOrder: 1
+          modelOrder: 1,
+          state: "不在地铁"
         }
       ],
       notification: [

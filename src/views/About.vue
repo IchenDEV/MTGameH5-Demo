@@ -18,6 +18,10 @@
       <el-switch v-model="notify"></el-switch>
     </div>
     <div class="flex-container">
+      <h4 class="header">同地铁好友可见</h4>
+      <el-switch v-model="see"></el-switch>
+    </div>
+    <div class="flex-container">
       <h4 class="header">昵称</h4>
       <el-input v-model="nickName" placeholder="请输入昵称"></el-input>
     </div>
@@ -28,6 +32,7 @@
     <div class="back" @click="$router.push('/')">
       <h4 class="header">返回</h4>
     </div>
+    <p style="color:grey;">脉拓 —— 游戏拓展人脉</p>
   </div>
 </template>
 <script>

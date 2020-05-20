@@ -8,7 +8,9 @@
       </tr>
       <tr v-for="(i, index) in friends" :key="index">
         <a @click="friendClicked(i)" style="text-decoration:none;">
-          <td style="color:#4D6AEB">{{ i.name }}</td>
+          <td style="color:#4D6AEB">
+            {{ i.name }} <el-tag type="success">{{ i.state }}</el-tag>
+          </td>
         </a>
         <td>{{ i.level }}</td>
       </tr>

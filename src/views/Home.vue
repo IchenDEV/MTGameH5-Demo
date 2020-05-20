@@ -118,6 +118,10 @@ export default {
       }
     }, 1000);
   },
+  beforeRouteUpdate(to, from, next) {
+    this.$store.state.showLive2D = true;
+    next();
+  },
   methods: {
     settingClicked() {
       this.$router.push("/about");
