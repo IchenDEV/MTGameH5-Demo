@@ -70,6 +70,7 @@
     </transition>
     <el-dialog title="随机任务" :visible.sync="dialogVisible" width="80%">
       <h3>请拜访一个好友，并给他点赞</h3>
+      <img src="/img/box.png" width="50%" />
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">拒 绝</el-button>
         <el-button type="primary" @click="dialogVisible = false"

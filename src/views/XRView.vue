@@ -5,7 +5,11 @@
         <fucard :show-button="true"></fucard>
       </ar-element>
       <ar-element :id="6">
-        <fucard :show-button="true"></fucard>
+        <el-avatar
+          class="offset"
+          :size="64"
+          src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+        ></el-avatar>
       </ar-element>
     </ar-view>
     <game-button
@@ -46,5 +50,8 @@ export default {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+.offset {
+  transform: translateX(-40px) translateY(-40px);
 }
 </style>

@@ -13,12 +13,18 @@
     <div style="display: flex;width:100%;height:100%;overflow:auto">
       <fucard
         :show-button="false"
+        type="unknow"
         style="transform: scale(6) translate(30px, 50px);max-width:300px;"
-      ></fucard
-      ><fucard
+      ></fucard>
+      <fucard
+        :show-button="false"
+        style="transform: scale(6) translate(50px, 50px);max-width:300px;"
+      ></fucard>
+      <fucard
         :show-button="false"
         style="transform: scale(6) translate(60px, 50px);max-width:300px;"
       ></fucard>
+      <el-button disabled type="primary" round class="combine">合成</el-button>
     </div>
   </div>
 </template>
@@ -73,4 +79,10 @@ export default {
   }
 };
 </script>
-<style lang="less"></style>
+<style lang="less">
+.combine {
+  bottom: 1rem;
+  position: absolute;
+  left: 40%;
+}
+</style>

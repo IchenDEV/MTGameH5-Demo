@@ -4,6 +4,7 @@
     <el-tabs class="tabs" tab-position="left">
       <el-tab-pane label="成就1">
         <div>
+          <img src="/img/cap.png" width="40%" />
           <p style="color:#9475FF;line-height:5px">
             和宠物互动10次
           </p>
@@ -13,6 +14,7 @@
       </el-tab-pane>
       <el-tab-pane label="成就2">
         <div>
+          <img src="/img/cap.png" width="40%" />
           <p style="color:#9475FF;line-height:5px">
             和宠物互动10次
           </p>
@@ -22,6 +24,7 @@
       </el-tab-pane>
       <el-tab-pane label="成就3">
         <div>
+          <img src="/img/cap.png" width="40%" />
           <p style="color:#9475FF;line-height:5px">
             和宠物互动10次
           </p>

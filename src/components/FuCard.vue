@@ -19,7 +19,7 @@ export default {
     type: {
       validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
-        return ["ditan", "pingan", "123"].indexOf(value) !== -1;
+        return ["ditan", "pingan", "unknow"].indexOf(value) !== -1;
       },
       default: "ditan"
     }
@@ -37,6 +37,8 @@ export default {
       switch (this.type) {
         case "ditan":
           return "./card/bike/index.html";
+        case "unknow":
+          return "./card/unknow/index.html";
         default:
           return "";
       }
